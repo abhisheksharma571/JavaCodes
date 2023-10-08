@@ -1,0 +1,8 @@
+Hello
+B
+abhia
+JAVA
+100
+a
+50.5
+true
