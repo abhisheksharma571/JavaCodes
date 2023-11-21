@@ -31,7 +31,7 @@ public class getterAndSetter {
         int stud2Age = obj1.getAge();
         String stud1Name = obj.getName();
         String stud2Name = obj1.getName();
-        System.out.println(stud1Age+stud1Name);
-        System.out.println(stud2Age+stud2Name);
+        System.out.println(stud1Age+" "+stud1Name);
+        System.out.println(stud2Age+" "+stud2Name);
     }
 }
