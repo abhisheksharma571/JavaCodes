@@ -30,7 +30,7 @@ public class staticUse {
     public static void main(String[] args) {
         Farmer f1 = new Farmer();
         Farmer f2 = new Farmer();
-        f1.input();;
+        f1.input();
         f1.compute();
         f1.disp();
 

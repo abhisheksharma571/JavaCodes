@@ -1,5 +1,5 @@
 package Stacks;
-//Given a string s containing just the characters '(',')','{','}','[',']' determine if the input string is valid.
+//leetcode 20: Given a string s containing just the characters '(',')','{','}','[',']' determine if the input string is valid.
 import java.util.Scanner;
 import java.util.Stack;
 

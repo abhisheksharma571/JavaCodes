@@ -5,38 +5,26 @@ import java.util.Stack;
 
 public class stockSpan {
 
-    public static int[] calculateSpan(int[] prices) {
-        int[] span = new int[prices.length];
-        Stack<Integer> stack = new Stack<>();
-
-        // Initialize the span of the first day as 1
-        span[0] = 1;
-
-        // Iterate over the prices array to calculate the span of each day
-        for (int i = 1; i < prices.length; i++) {
-            // While the stack is not empty and the price of the current day is greater than or equal to the price at the top of the stack, pop the top of the stack
-            while (!stack.isEmpty() && prices[i] >= prices[stack.peek()]) {
-                stack.pop();
+    public static int[] calculateSpan(int[] prices, int n) {
+        int[] ans = new int[n];
+        Stack<Integer> st = new Stack<>();
+        st.push(0);
+        ans[0] = 1;
+        for(int i=1;i<n;i++){
+            while (st.size() > 0 && prices[st.peek()] <= prices[i]){
+                st.pop();
             }
-
-            // If the stack is empty, then the span of the current day is the current index + 1
-            if (stack.isEmpty()) {
-                span[i] = i + 1;
-            } else {
-                // Otherwise, the span of the current day is the current index - the index at the top of the stack
-                span[i] = i - stack.peek();
-            }
-
-            // Push the current index into the stack
-            stack.push(i);
+            if(st.size() > 0) ans[i] = i-st.peek();
+            else ans[i] = i+1;
+            st.push(i);
         }
-
-        return span;
+        return ans;
     }
 
     public static void main(String[] args) {
         int[] prices = {100, 80, 60, 70, 60, 75, 85};
-        int[] span = calculateSpan(prices);
+        int n = prices.length;;
+        int[] span = calculateSpan(prices, n);
 
         for (int i = 0; i < span.length; i++) {
             System.out.println("Span on day " + i + ": " + span[i]);
