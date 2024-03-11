@@ -23,6 +23,6 @@ public class countGreaterX {
         }
         System.out.print("Enter x: ");
         int x=sc.nextInt();
-        System.out.print("number of elments greter than x: "+ countOccurence(arr,x));
+        System.out.print("number of elements greater than x: "+ countOccurence(arr,x));
     }
 }

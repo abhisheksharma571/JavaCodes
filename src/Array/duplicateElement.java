@@ -1,15 +1,15 @@
 package Array;
 
+import java.util.Arrays;
+
 public class duplicateElement {
     public static void main(String[] args) {
-        int[] arr = {2,3,3,4,4,9};
+        int[] arr = {2,3,4,4,9};
         int n = arr.length;
-
-        for(int i=0;i<n;i++){
-            for(int j=i+1;j<n;j++){
-                if(arr[i]==arr[j]){
-                    System.out.println("Duplicate Elements found is: "+arr[i]);
-                }
+        Arrays.sort(arr);
+        for(int i=0;i<n-1;i++){
+            if(arr[i] == arr[i+1]){
+                System.out.println("Duplicate element is : "+ arr[i]);
             }
         }
     }
