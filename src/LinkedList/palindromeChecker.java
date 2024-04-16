@@ -49,7 +49,6 @@ public class palindromeChecker {
             current1 = current1.next;
             current2 = current2.next;
         }
-
         // If we reach the end of both halves of the linked list, then the linked list is a palindrome.
         return true;
     }
@@ -64,7 +63,6 @@ public class palindromeChecker {
             previous = current;
             current = nextNode;
         }
-
         return previous;
     }
 

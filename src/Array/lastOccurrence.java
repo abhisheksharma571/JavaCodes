@@ -2,9 +2,9 @@ package Array;
 
 import java.util.Scanner;
 
-//find last occurence of an element x ina given array
-public class lastOccurence {
-    static int countOccurence(int[] arr,int x){
+//find last occurrence of an element x ina given array
+public class lastOccurrence {
+    static int countOccurrence(int[] arr,int x){
         int count=-1;
         for(int i=0;i< arr.length;i++){
             if(arr[i]==x){
@@ -24,6 +24,6 @@ public class lastOccurence {
         }
         System.out.print("Enter x: ");
         int x=sc.nextInt();
-        System.out.print("last occurence of x: "+ countOccurence(arr,x));
+        System.out.print("last occurence of x: "+ countOccurrence(arr,x));
     }
 }

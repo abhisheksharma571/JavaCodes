@@ -3,7 +3,7 @@ import java.io.*;
 public class bufferReader {
     public static void main(String[] args) throws IOException {
         File dir = new File("PWJava");
-        File file = new File(dir,"test.txt");
+        File file = new File(dir,"test.java.txt");
 
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);

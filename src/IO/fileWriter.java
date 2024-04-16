@@ -5,7 +5,7 @@ public class fileWriter {
     public static void main(String[] args) throws IOException{
         File dir = new File("PWJava");
 
-        File file = new File(dir,"test.txt");
+        File file = new File(dir,"test.java.txt");
 //        file.createNewFile();
 
         //writing data(overriding nature)
@@ -27,6 +27,6 @@ public class fileWriter {
         fw.close();     //you have to close, otherwise file waits for another data
 //        fw.flush();     //you can also ues flush method in place of close, but it is better to use close method
 
-        System.out.println("open test.txt to see result");
+        System.out.println("open test.java.txt to see result");
     }
 }
