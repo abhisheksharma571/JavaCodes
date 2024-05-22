@@ -47,6 +47,15 @@ public class implementation {
         if(root==null || (root.left==null && root.right==null)) return 0;
         return 1 + Math.max(height(root.left),height(root.right));
     }
+    public static boolean check(Node left, Node right){
+        if(left == null && right == null) return true;
+        if(left == null || right == null) return false;
+        if(left.val != right.val) return false;
+        return check(left.left, right.right) && check(left.right, right.left);
+    }
+    public static boolean isSymmetric(Node root){
+        return check(root, root);
+    }
     public static void main(String[] args) {
         Node root = new Node(1);
         Node a = new Node(2);
@@ -68,5 +77,6 @@ public class implementation {
         System.out.println("Max value of tree is "+maxValue(root));
         System.out.println("Min value of tree is "+minValue(root));
         System.out.println("Height of tree is "+height(root));
+        System.out.println("Is the tree symmetric? "+isSymmetric(root));
     }
 }

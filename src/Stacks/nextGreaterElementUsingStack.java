@@ -1,5 +1,6 @@
 package Stacks;
-
+//The Next greater Element for an element x is the first greater element on the right side of x in the array.
+// Elements for which no greater element exist, consider the next greater element as -1.
 import java.util.Stack;
 
 public class nextGreaterElementUsingStack {
