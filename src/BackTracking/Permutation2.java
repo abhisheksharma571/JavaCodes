@@ -62,7 +62,7 @@ public class Permutation2 {
         return ans;
     }
     public static void main(String[] args) {
-        int[] nums = {1,2,3};
+        int[] nums = {1,1,3};
 //        List<List<Integer>> answer = permute(nums);
 //        System.out.println(answer);
 

@@ -8,7 +8,7 @@ package DynamicProgramming;
 //               c. space optimize this      - TC:O(n), SC:O(1)
 public class tabulation {
     public static void main(String[] args) {
-        int n = 10;
+        int n = 2;
         int prev1 = 1;
         int prev2 = 1;
         int current = 0;
